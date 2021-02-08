@@ -60,4 +60,21 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  manifest: {
+    name: 'Nuxt.jsのPWA',      // アプリの名称
+    short_name: 'Nuxt PWA',    // ホーム画面に表示される名称
+    display: 'standalone',     // 表示モード  'fullscreen' 'standalone' 'minimal-ui' 'browser'
+    theme_color: '#ff4a93',    // アプリケーションの既定のテーマ色を定義
+    background_color: '#ffdce6',  // 背景の色
+    lang: 'ja',                // 言語
+    start_url: '/?mode=pwa',   // アイコンから起動した時のURL
+    icons: [
+      {
+        src: '/static/icon.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ],
+  }
 }
